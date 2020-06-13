@@ -1,4 +1,9 @@
-# naniga-derukana
+# 話題ガチャ
+
+https://naniga-derukana.netlify.app
+
+懇親会で新人と話したい、けど年齢も離れているしなかなか話題が見つからない…。 
+そんな時に活躍してくれる（かもしれない）アプリです。
 
 ## Project setup
 ```
