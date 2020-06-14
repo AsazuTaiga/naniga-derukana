@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <loading-image v-show="loading" />
-    <div v-show="!loading">
+    <div>
       <div>
         <flash-text :themes="talkThemes" />
       </div>
@@ -20,7 +19,6 @@
 import FlashText from "@/components/FlashText";
 import StartButton from "@/components/StartButton";
 import ShuffleAndShow from "@/components/ShuffleAndShow";
-import LoadingImage from "@/components/LoadingImage";
 
 // Model
 import talkThemes from "@/model/talk-themes.json";
@@ -31,13 +29,11 @@ export default {
     FlashText,
     StartButton,
     ShuffleAndShow,
-    LoadingImage
   },
   data: () => {
     return {
       talkThemes: talkThemes,
       shuffleAndShowVisible: false,
-      loading: true
     };
   },
   methods: {
@@ -47,11 +43,6 @@ export default {
     onStartButtonReload() {
       this.$refs.shuffleAndShow.shuffle();
     }
-  },
-  mounted() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 500);
   }
 };
 </script>
