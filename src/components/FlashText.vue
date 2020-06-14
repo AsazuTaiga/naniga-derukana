@@ -1,8 +1,7 @@
 <template>
   <div>
-  <div v-for="n of 30" :key="n"
-    class="flashMessage"
-  >{{ repeat5Times(themes[n]) }}</div>
+  <div class="flashMessage"
+  >{{ textContent }}</div>
   </div>
 </template>
 
@@ -12,9 +11,13 @@ export default {
   props: {
     themes: Array
   },
-  methods: {
-    repeat5Times(str) {
-      return `${str} ${str} ${str} ${str} ${str}`
+  computed: {
+    textContent() {
+      let content = "";
+      for (let i = 0; i < 30; i++) {
+        content = content + `${this.themes[i]} ${this.themes[i]} ${this.themes[i]} ${this.themes[i]} ${this.themes[i]}\n`;
+      }
+      return content;
     }
   }
 };
@@ -29,7 +32,7 @@ export default {
   font-style: italic;
   width: 200vw;
   overflow: hidden;
-  white-space: nowrap;
+  white-space: normal;
   text-align: start;
   user-select: none;
   // animations
