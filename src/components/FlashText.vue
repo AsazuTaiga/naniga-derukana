@@ -17,7 +17,7 @@ export default {
       for (let i = 0; i < 30; i++) {
         content = content + ' ' + this.themes[i];
       }
-      return content + content + content;
+      return content + content + content + content;
     }
   }
 };
