@@ -1,14 +1,21 @@
 <template>
-  <div
+  <div>
+  <div v-for="n of 30" :key="n"
     class="flashMessage"
-  >{{ msg + ' ' + msg + ' ' + msg + ' ' + msg + ' ' + msg + ' ' + msg + ' ' + msg + ' ' + msg }}</div>
+  >{{ repeat5Times(themes[n]) }}</div>
+  </div>
 </template>
 
 <script>
 export default {
   name: "flash-text",
   props: {
-    msg: String
+    themes: Array
+  },
+  methods: {
+    repeat5Times(str) {
+      return `${str} ${str} ${str} ${str} ${str}`
+    }
   }
 };
 </script>

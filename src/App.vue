@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div>
-      <flash-text v-for="n of 30" :key="n" :msg="talkThemes[n]" />
+      <flash-text :themes="talkThemes" />
     </div>
     <shuffle-and-show ref="shuffleAndShow" :themes="this.talkThemes" v-if="shuffleAndShowVisible" />
     <start-button @click="onStartButtonClick()" @reload="onStartButtonReload()" />
