@@ -15,9 +15,9 @@ export default {
     textContent() {
       let content = "";
       for (let i = 0; i < 30; i++) {
-        content = content + `${this.themes[i]} ${this.themes[i]} ${this.themes[i]} ${this.themes[i]} ${this.themes[i]}\n`;
+        content = content + ' ' + this.themes[i];
       }
-      return content;
+      return content + content + content;
     }
   }
 };
