@@ -24,5 +24,16 @@ export default {
   position: fixed;
   bottom: 2%;
   left: 2%;
+  animation-name: show;
+  animation-duration: 0.5s;
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 100;
+  }
 }
 </style>
