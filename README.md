@@ -5,6 +5,8 @@ https://naniga-derukana.netlify.app
 懇親会で新人と話したい、けど年齢も離れているしなかなか話題が見つからない…。 
 そんな時に活躍してくれる（かもしれない）アプリです。
 
+※sound cloudの音楽を追加しました。
+
 ## Project setup
 ```
 npm install
