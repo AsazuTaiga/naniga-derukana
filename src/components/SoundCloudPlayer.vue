@@ -8,7 +8,7 @@
       scrolling="no"
       frameborder="no"
       allow="autoplay"
-      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/20718099&color=%23ddb1f2&auto_play=false&buying=false&sharing=false&hide_related=true&liking=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
+      src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1073831818&color=%23ddb1f2&auto_play=false&downloading=false&buying=false&sharing=false&hide_related=true&liking=false&show_comments=false&show_user=false&show_reposts=false&show_teaser=false"
     ></iframe>
   </div>
 </template>
