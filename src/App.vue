@@ -4,6 +4,7 @@
       <div>
         <flash-text :themes="talkThemes" />
       </div>
+      <sound-cloud-player></sound-cloud-player>
       <shuffle-and-show
         ref="shuffleAndShow"
         :themes="this.talkThemes"
@@ -19,6 +20,7 @@
 import FlashText from "@/components/FlashText";
 import StartButton from "@/components/StartButton";
 import ShuffleAndShow from "@/components/ShuffleAndShow";
+import SoundCloudPlayer from '@/components/SoundCloudPlayer'
 
 // Model
 import talkThemes from "@/model/talk-themes.json";
@@ -29,6 +31,7 @@ export default {
     FlashText,
     StartButton,
     ShuffleAndShow,
+    SoundCloudPlayer
   },
   data: () => {
     return {
