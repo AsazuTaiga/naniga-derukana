@@ -4,11 +4,12 @@
       <div>
         <flash-text :themes="talkThemes" />
       </div>
-      <sound-cloud-player></sound-cloud-player>
+      <sound-cloud-player
+        v-show="started"></sound-cloud-player>
       <shuffle-and-show
         ref="shuffleAndShow"
         :themes="this.talkThemes"
-        v-if="shuffleAndShowVisible"
+        v-show="started"
       />
       <start-button @click="onStartButtonClick()" @reload="onStartButtonReload()" />
     </div>
@@ -36,12 +37,12 @@ export default {
   data: () => {
     return {
       talkThemes: talkThemes,
-      shuffleAndShowVisible: false,
+      started: false,
     };
   },
   methods: {
     onStartButtonClick() {
-      this.shuffleAndShowVisible = true;
+      this.started = true;
     },
     onStartButtonReload() {
       this.$refs.shuffleAndShow.shuffle();
