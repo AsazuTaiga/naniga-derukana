@@ -4,14 +4,9 @@
       <div>
         <flash-text :themes="talkThemes" />
       </div>
-      <sound-cloud-player
-        v-show="started"></sound-cloud-player>
-      <shuffle-and-show
-        ref="shuffleAndShow"
-        :themes="this.talkThemes"
-        v-show="started"
-      />
+      <shuffle-and-show ref="shuffleAndShow" :themes="this.talkThemes" v-show="started" />
       <start-button @click="onStartButtonClick()" @reload="onStartButtonReload()" />
+      <sound-cloud-player v-show="started"></sound-cloud-player>
     </div>
   </div>
 </template>
@@ -21,7 +16,7 @@
 import FlashText from "@/components/FlashText";
 import StartButton from "@/components/StartButton";
 import ShuffleAndShow from "@/components/ShuffleAndShow";
-import SoundCloudPlayer from '@/components/SoundCloudPlayer'
+import SoundCloudPlayer from "@/components/SoundCloudPlayer";
 
 // Model
 import talkThemes from "@/model/talk-themes.json";
@@ -37,7 +32,7 @@ export default {
   data: () => {
     return {
       talkThemes: talkThemes,
-      started: false,
+      started: false
     };
   },
   methods: {
