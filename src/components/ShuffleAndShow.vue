@@ -55,17 +55,17 @@ div {
   // font style
   color: var(--theme-text);
   .title {
-    font-size: 2vw;
+    font-size: 3vh;
   }
   .theme-text {
-    height: 30vh;
-    font-size: 4vw;
+    height: 35vh;
+    font-size: 5vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .reload-text {
-    font-size: 1.5vw;
+    font-size: 2vh;
   }
 
   // outer centering
