@@ -11,6 +11,7 @@ export default {
   name: "shuffle-and-show",
   data() {
     return {
+      first: true,
       msg: ""
     };
   },
@@ -22,7 +23,17 @@ export default {
   },
   methods: {
     shuffle() {
-      this.msg = this.themes[Math.floor(Math.random() * this.themes.length)];
+      const shuffleOnce = () =>
+        (this.msg = this.themes[
+          Math.floor(Math.random() * this.themes.length)
+        ]);
+      if (this.first) {
+        shuffleOnce();
+        this.first = false;
+      } else {
+        const interval = setInterval(() => shuffleOnce(), 50);
+        setTimeout(() => clearInterval(interval), 500);
+      }
     }
   },
   mounted() {
@@ -47,7 +58,11 @@ div {
     font-size: 2vw;
   }
   .theme-text {
+    height: 30vh;
     font-size: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .reload-text {
     font-size: 1.5vw;

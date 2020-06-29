@@ -5,13 +5,16 @@
 </template>
 
 <script>
+import passBySoundMp3 from "@/assets/pass_by.mp3";
+
 export default {
   name: "start-button",
   data: () => {
     return {
       isClicked: false,
       isRotate: false,
-      iconName: "question"
+      iconName: "question",
+      sound: new Audio(passBySoundMp3)
     };
   },
   methods: {
@@ -22,6 +25,8 @@ export default {
         this.iconName = "undo";
       } else {
         this.$emit("reload");
+        this.sound.currentTime = 0;
+        this.sound.play();
         this.isRotate = true;
         setTimeout(() => {
           this.isRotate = false;
